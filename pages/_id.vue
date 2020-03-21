@@ -1,20 +1,66 @@
 <template>
   <div>
-    <v-container fluid>
+
+
+
+    <v-container >
+      
+      
       <v-row>
-        <v-col cols="12" lg="3" md="3" sm="6" class="ml-5">
-          <v-card class="ml-8">
+
+
+        <v-col cols="12" lg="8" md="12" sm="12" >
+          
+          
+          
+          <v-card>
             <v-carousel cycle height="400" hide-delimiter-background show-arrows-on-hover>
+              
+              
               <div v-for="(data, i) in result.infographics_images" :key="i">
                 <v-carousel-item :src="data.image.url"></v-carousel-item>
               </div>
-            </v-carousel>
 
-            <v-card-title>{{result.title}}</v-card-title>
-            <v-card-text>{{result.Description}}</v-card-text>
+            </v-carousel>
+          </v-card>
+
             
-            <v-card-actions>
-              <v-btn icon>
+            
+            
+
+
+
+        </v-col>
+
+        <v-col cols="12" lg="4" md="12" sm="12" >
+
+          
+          <div class="d-flex flex-column">
+
+            
+
+            <span class="display-3">
+              {{result.title}}
+            </span>
+
+            
+            <div class="d-flex flex-wrap">
+
+              <div v-for="i in 8" :key="i" dense dark class="black metaTag white--text overline px-3 py-1 ma-1">
+                  lorem
+                  </div>
+
+            </div
+
+            
+
+            <span class="headline-3">
+              {{result.Description}}
+            </span>
+              
+
+              <div class="d-fex justify-space-between align-center">
+                <v-btn icon>
                 <font-awesome-icon :icon="['fab', 'facebook']" class="icon"/>
               </v-btn>
               <v-btn icon>
@@ -23,11 +69,27 @@
               <v-btn icon>
                 <font-awesome-icon :icon="['fab', 'whatsapp']" class="icon" />
               </v-btn>
-            </v-card-actions>
-          </v-card>
+              </div>
+            
+
+          </div>
+
+
+
         </v-col>
       </v-row>
+
+
     </v-container>
+
+    <v-col>
+
+
+
+    </v-col>
+
+
+
   </div>
 </template>
 
@@ -64,5 +126,8 @@ export default {
 <style scoped>
 .icon{
   font-size: 20px;
+}
+.metaTag{
+  border-radius:.4em;
 }
 </style>

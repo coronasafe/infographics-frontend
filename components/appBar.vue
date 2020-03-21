@@ -1,18 +1,26 @@
 <template>
   <div>
     <v-app-bar color="#ffffff">
-        
-        <v-toolbar-title>COVID-19 Infographics</v-toolbar-title>
 
-<v-spacer></v-spacer>
-         <v-img
-    class="mx-2"
-    src="https://gblobscdn.gitbook.com/spaces%2F-M233b0_JITp4nk0uAFp%2Favatar-rectangle-1584020107059.png"
-    max-height="150"
-    max-width="150"
-    contain
-  ></v-img>
-              <v-spacer></v-spacer>
+      <v-container class="d-flex justify-space-between align-center">
+
+
+        <v-img
+            class="mx-2"
+            src="https://gblobscdn.gitbook.com/spaces%2F-M233b0_JITp4nk0uAFp%2Favatar-rectangle-1584020107059.png"
+            max-height="150"
+            max-width="150"
+            contain
+          ></v-img>
+
+      <!--<v-toolbar-title>COVID-19 Infographics</v-toolbar-title>-->
+
+          
+         
+              
+              
+              
+             
 
               <div>
                 <v-menu open-on-hover top offset-y >
@@ -27,6 +35,11 @@
                   </v-list>
                 </v-menu>
               </div>
+
+
+      </v-container>
+        
+        
 
       
     </v-app-bar>
