@@ -3,17 +3,17 @@
 
 
 
-    <v-container >
+    <v-container class="mt-5">
       
       
       <v-row>
 
 
-        <v-col cols="12" lg="8" md="12" sm="12" >
+        <v-col cols="12" lg="8" md="12" sm="12"  class=" ">
           
           
           
-          <v-card>
+          <v-card >
             <v-carousel cycle height="400" hide-delimiter-background show-arrows-on-hover>
               
               
@@ -32,14 +32,14 @@
 
         </v-col>
 
-        <v-col cols="12" lg="4" md="12" sm="12" >
+        <v-col cols="12" lg="4" md="12" sm="12" class=" " >
 
           
-          <div class="d-flex flex-column">
+          <div class="d-flex flex-column ">
 
             
 
-            <span class="display-3">
+            <span class="display-3 ">
               {{result.title}}
             </span>
 
