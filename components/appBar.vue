@@ -6,9 +6,9 @@
 
     >
 
-      <v-toolbar-title>Infographics</v-toolbar-title>
+        <v-toolbar-title>Corona Infographics</v-toolbar-title>
 
-      <v-spacer></v-spacer>
+      
 
       
     </v-app-bar>
