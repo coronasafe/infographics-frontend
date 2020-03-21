@@ -4,20 +4,24 @@
       <v-row>
         <v-col cols="12" lg="3" md="3" sm="6" class="ml-5">
           <v-card class="ml-8">
-            <!-- <v-img :src="result.infographics_images[0].image.url" /> -->
+            <v-carousel cycle height="400" hide-delimiter-background show-arrows-on-hover>
+              <div v-for="(data, i) in result.infographics_images" :key="i">
+                <v-carousel-item :src="data.image.url"></v-carousel-item>
+              </div>
+            </v-carousel>
 
             <v-card-title>{{result.title}}</v-card-title>
             <v-card-text>{{result.Description}}</v-card-text>
             
             <v-card-actions>
               <v-btn icon>
-                <font-awesome-icon :icon="['fab', 'facebook']" />
+                <font-awesome-icon :icon="['fab', 'facebook']" class="icon"/>
               </v-btn>
               <v-btn icon>
-                <font-awesome-icon :icon="['fab', 'twitter']" class="large" />
+                <font-awesome-icon :icon="['fab', 'twitter']" class="icon" />
               </v-btn>
               <v-btn icon>
-                <font-awesome-icon :icon="['fab', 'whatsapp']" class="large" />
+                <font-awesome-icon :icon="['fab', 'whatsapp']" class="icon" />
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -43,6 +47,7 @@ export default {
       })
         .then(res => {
           this.result = res.data;
+          console.log(result.infographics_images[0].image.url)
         })
         .catch(e => {
           console.log(e.response.data);
@@ -54,3 +59,10 @@ export default {
   }
 };
 </script>
+
+
+<style scoped>
+.icon{
+  font-size: 20px;
+}
+</style>
