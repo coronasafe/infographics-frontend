@@ -1,57 +1,61 @@
 <template>
   <div>
     <v-container fluid>
-      <v-card class="mx-auto">
-        <v-img
-          class="white--text align-end"
-          height="200px"
-          src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-        />
-        <v-card-title>{{result.title}}</v-card-title>
-        <v-card-text>Lorem ispum dolor</v-card-text>
-        <v-card-actions>
-          <v-btn icon>
-            <font-awesome-icon :icon="['fab', 'facebook']" class="large"/>
-          </v-btn>
-          <v-btn icon>
-            <font-awesome-icon :icon="['fab', 'twitter']" class="large"/>
-          </v-btn>
-          <v-btn icon>
-            <font-awesome-icon :icon="['fab', 'whatsapp']" class="large"/>
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+      <v-row>
+        <v-col cols="12" lg="3" md="3" sm="6" class="ml-5">
+          <v-card class="ml-8" width="600em">
+            <v-carousel cycle height="400" hide-delimiter-background show-arrows-on-hover>
+              <div v-for="(image, i) in result.infographics_images" :key="i">
+                <v-carousel-item :src="image.url"></v-carousel-item>
+              </div>
+            </v-carousel>
+
+            <v-card-title>{{result.title}}</v-card-title>
+            <v-card-text>{{result.Description}}</v-card-text>
+            
+            <v-card-actions>
+              <v-btn icon>
+                <font-awesome-icon :icon="['fab', 'facebook']" />
+              </v-btn>
+              <v-btn icon>
+                <font-awesome-icon :icon="['fab', 'twitter']" class="large" />
+              </v-btn>
+              <v-btn icon>
+                <font-awesome-icon :icon="['fab', 'whatsapp']" class="large" />
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
 
 <script>
 export default {
-  data(){
-      return{
-          result:[]
-      }
+  data() {
+    return {
+      result: []
+    };
   },
   methods: {
     getData() {
-      //alert('hello')
-      this.$axios.get({
-          url:`https://manager.raksha.life/infographics/5e7460b30b80f8076a5c22d4`,
-          method : 'GET'
+      let rel = this.$route.params.id;
+      this.$axios({
+        url: `https://manager.raksha.life/infographics/${rel}`,
+        method: "GET"
       })
-      .then((res)=>{
-          this.result = res.data
-          console.log(this.result)
-      })
-      .catch((e)=>{
-          console.log(e.response.data)
-      })
-      ;
+        .then(res => {
+          this.result = res.data;
+          console.log(this.result.infographics_images[0].image.url);
+        })
+        .catch(e => {
+          console.log(e.response.data);
+        });
     }
   },
-  mounted(){
-      this.getData()
-
+  beforeMount() {
+    this.getData();
   }
 };
 </script>
