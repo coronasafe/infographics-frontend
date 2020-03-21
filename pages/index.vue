@@ -3,6 +3,8 @@
     <nuxt-link to="/id">
       index.vue 
     </nuxt-link>
+    
+
   </div>
 </template>
 
