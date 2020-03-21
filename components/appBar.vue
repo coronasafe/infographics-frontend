@@ -1,22 +1,30 @@
 <template>
-<div>
-    <v-app-bar
-      dark
-      dense
+  <div>
+    <v-app-bar dark dense>
+      <v-toolbar-title>Corona Infographics</v-toolbar-title>
+      <v-spacer></v-spacer>
 
-    >
+      <div>
+        <v-menu open-on-hover top offset-y>
+          <template v-slot:activator="{ on }">
+            <v-btn dark v-on="on">Language</v-btn>
+          </template>
 
-        <v-toolbar-title>Corona Infographics</v-toolbar-title>
-
-      
-
-      
+          <v-list>
+            <v-list-item v-for="(item, index) in items" :key="index" >
+              <v-list-item-title>{{ item }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+      </div>
     </v-app-bar>
-</div>
+  </div>
 </template>
 
 <script>
 export default {
-    
-}
+  data: () => ({
+    items: ["English", "Hindi"]
+  })
+};
 </script>
