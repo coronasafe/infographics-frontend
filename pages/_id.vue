@@ -1,5 +1,17 @@
 <template>
     <div>
-        id.vue
+        
     </div>
 </template>
+
+<script>
+export default {
+    methods : {
+        getImage(){
+
+        }
+    }
+
+
+}
+</script>

@@ -1,4 +1,5 @@
 
+
 export default {
   mode: 'universal',
   /*
@@ -33,15 +34,29 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    '@nuxtjs/vuetify',
   ],
   /*
   ** Nuxt.js modules
   */
+
   modules: [
   ],
   /*
   ** Build configuration
   */
+ vuetify: {
+  theme: {
+    dark: false,
+    themes: {
+      dark: {
+       
+      }
+    }
+  }
+},
+
+
   build: {
     /*
     ** You can extend webpack config here

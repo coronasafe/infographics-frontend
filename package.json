@@ -12,10 +12,10 @@
     "test": "jest"
   },
   "dependencies": {
-    "@nuxtjs/vuetify": "^1.11.0",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "@nuxtjs/vuetify": "^1.11.0",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-jest": "^24.1.0",
     "jest": "^24.1.0",
