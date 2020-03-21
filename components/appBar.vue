@@ -1,11 +1,14 @@
 <template>
     <v-app-bar
       dark
+      app
     >
 
-      <v-toolbar-title>Infographics</v-toolbar-title>
+      <v-container>
+        <v-toolbar-title>Corona Infographics</v-toolbar-title>
+      </v-container>
 
-      <v-spacer></v-spacer>
+      
 
       
     </v-app-bar>
