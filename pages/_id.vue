@@ -35,8 +35,9 @@ export default {
   methods: {
     getData() {
       //alert('hello')
-      this.$axios.$get({
-          url:`https://manager.raksha.life/infographics/5e7460b30b80f8076a5c22d4`
+      this.$axios.get({
+          url:`https://manager.raksha.life/infographics/5e7460b30b80f8076a5c22d4`,
+          method : 'GET'
       })
       .then((res)=>{
           this.result = res.data
