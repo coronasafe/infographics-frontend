@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar dark dense>
+    <v-app-bar dark >
       <v-toolbar-title>Corona Infographics</v-toolbar-title>
       <v-spacer></v-spacer>
 

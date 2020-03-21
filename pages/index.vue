@@ -5,19 +5,24 @@
 
         <v-row>
 
-              <v-col cols="12" lg="3" md="4" sm="6" v-for="i in 12" :key="i">
+              <v-col cols="12" lg="3" md="4" sm="6" v-for="result in results" :key="result.id">
                 
                 
-                
-                <nuxt-link to="/1234">
-                      
+                 <v-hover
+                    v-slot:default="{ hover }"
+                  >
 
-                      <v-card>
-                        <v-img src="https://raksha-infographics.s3.ap-south-1.amazonaws.com/1ebb2275af2744748e4f06374356e0d0.png" alt="" />
+                <nuxt-link :to="'/' + result.id">
+                      
+                      <v-card
+                      :elevation="hover ? 12 : 2"
+                      >
+                        <v-img :src="result.infographics_images[0].image.url" alt="" />
                       </v-card>
 
 
                 </nuxt-link>
+                 </v-hover>
 
               </v-col>
 
@@ -37,7 +42,33 @@
 <script>
 
 export default {
+  data(){
+    return{
+
+
+      results:[]
+
+
+    }
+  },
   
+  mounted(){
+    
+    this.$axios({
+      url:'https://manager.raksha.life/infographics',
+      method:'GET',
+    })
+    .then(
+      res => {
+        //console.log(this.data.results);
+        this.results = res.data;
+        console.log(this.results);
+      }
+    )
+    .catch(err => {
+      console.log(err)
+    })
+  }
 }
 </script>
 
