@@ -3,12 +3,8 @@
     <v-container fluid>
       <v-row>
         <v-col cols="12" lg="3" md="3" sm="6" class="ml-5">
-          <v-card class="ml-8" width="600em">
-            <v-carousel cycle height="400" hide-delimiter-background show-arrows-on-hover>
-              <div v-for="(image, i) in result.infographics_images" :key="i">
-                <v-carousel-item :src="image.url"></v-carousel-item>
-              </div>
-            </v-carousel>
+          <v-card class="ml-8">
+            <!-- <v-img :src="result.infographics_images[0].image.url" /> -->
 
             <v-card-title>{{result.title}}</v-card-title>
             <v-card-text>{{result.Description}}</v-card-text>
@@ -47,7 +43,6 @@ export default {
       })
         .then(res => {
           this.result = res.data;
-          console.log(this.result.infographics_images[0].image.url);
         })
         .catch(e => {
           console.log(e.response.data);
