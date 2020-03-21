@@ -1,21 +1,20 @@
 <template>
   <div>
-  <v-app>
-    <app-bar/>
-  </v-app>
-  <v-content>
+    <v-app>
+    <appBar />
+    <v-content>
     <nuxt />
   </v-content>
+    </v-app>
   </div>
 </template>
 
 <script>
-import appbar from '../components/appbar'
+import appBar from '../components/appBar'
 export default {
-components : {
-  appbar
-}
-  
+   components:{
+   appBar,
+ }
 }
 </script>
 
