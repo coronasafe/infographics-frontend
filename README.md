@@ -1,7 +1,7 @@
 # infographics-coronasafe
 
 
-Front end for the infographics app 
+Concise, reliable and shareable infographics for health, environmental and social awareness during the time of the Covid-19 outbreak
 
 
 > infographics --corona safe
