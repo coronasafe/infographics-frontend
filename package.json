@@ -1,8 +1,8 @@
 {
-  "name": "infographics-corona",
+  "name": "infographics-coronasafe",
   "version": "1.0.0",
-  "description": "infographics ---corona safe",
-  "author": "",
+  "description": "infographics --corona safe",
+  "author": "Corona Safe",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -15,7 +15,6 @@
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
-    "@nuxtjs/vuetify": "^1.0.0",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-jest": "^24.1.0",
     "jest": "^24.1.0",

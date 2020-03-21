@@ -1,6 +1,6 @@
-# infographics-corona
+# infographics-coronasafe
 
-> infographics ---corona safe
+> infographics --corona safe
 
 ## Build Setup
 
