@@ -62,17 +62,17 @@
 
               <div class="d-fex justify-space-between align-center">
                 <v-btn icon>
-                  <a class="share-facebook" :href="'https://www.facebook.com/sharer/sharer.php?u=coronasafe.in'+ $route.fullPath+'&amp;&amp;caption='+result.title+'&amp;&amp;quote='+result.Description" target="_blank">
+                  <a class="share-facebook" :href="'https://www.facebook.com/sharer/sharer.php?u=infographics.raksha.life'+ $route.fullPath+'&amp;&amp;caption='+result.title+'&amp;&amp;quote='+result.Description" target="_blank">
                     <font-awesome-icon :icon="['fab', 'facebook']" class="icon"/>
                   </a>
               </v-btn>
               <v-btn icon>
-                <a class="share-twitter" :href="'https://twitter.com/share?text=' + result.title + '&hashtags=Corona, Infographics, BreakTheChain' + '&url=https://coronasafe.in' + $route.fullPath" target="_blank">
+                <a class="share-twitter" :href="'https://twitter.com/share?text=' + result.title + '&hashtags=Corona, Infographics, BreakTheChain' + '&url=https://infographics.raksha.life' + $route.fullPath" target="_blank">
                   <font-awesome-icon :icon="['fab', 'twitter']" class="icon" />
                 </a>
               </v-btn>
               <v-btn icon>
-                <a :href="'whatsapp://send?text='+result.Description+'For more details : https://coronasafe.in'+$route.fullPath" data-action="share/whatsapp/share">
+                <a :href="'whatsapp://send?text='+result.Description+'For more details : https://infographics.raksha.life'+$route.fullPath" data-action="share/whatsapp/share">
                   <font-awesome-icon :icon="['fab', 'whatsapp']" class="icon" />
                 </a>
               </v-btn>
