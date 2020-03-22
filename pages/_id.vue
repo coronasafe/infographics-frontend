@@ -55,19 +55,26 @@
             
 
             <span class="subtitle-2">
-              {{result.Description}} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a fermentum velit. Sed eget congue turpis, id lacinia nunc. Etiam venenatis facilisis nunc non dapibus. Vestibulum odio mauris, congue et purus in, sagittis blandit quam. Vivamus vitae condimentum mi. Nullam id orci a ipsum venenatis interdum. Suspendisse porta, magna ac congue interdum, ante nibh commodo arcu, nec fermentum risus tellus nec est. Ut rutrum sollicitudin erat, sit amet egestas sapien dictum eget. Nam ullamcorper, tellus id vestibulum vestibulum, leo velit rutrum leo, sit amet suscipit massa dui vel nisl
+              {{result.Description}} 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a fermentum velit. Sed eget congue turpis, id lacinia nunc. Etiam venenatis facilisis nunc non dapibus. Vestibulum odio mauris, congue et purus in, sagittis blandit quam. Vivamus vitae condimentum mi. Nullam id orci a ipsum venenatis interdum. Suspendisse porta, magna ac congue interdum, ante nibh commodo arcu, nec fermentum risus tellus nec est. Ut rutrum sollicitudin erat, sit amet egestas sapien dictum eget. Nam ullamcorper, tellus id vestibulum vestibulum, leo velit rutrum leo, sit amet suscipit massa dui vel nisl
             </span>
               
 
               <div class="d-fex justify-space-between align-center">
                 <v-btn icon>
-                <font-awesome-icon :icon="['fab', 'facebook']" class="icon"/>
+                  <a class="share-facebook" :href="'https://www.facebook.com/sharer/sharer.php?u=coronasafe.in'+ $route.fullPath+'&amp;&amp;caption='+result.title+'&amp;&amp;quote='+result.Description" target="_blank">
+                    <font-awesome-icon :icon="['fab', 'facebook']" class="icon"/>
+                  </a>
               </v-btn>
               <v-btn icon>
-                <font-awesome-icon :icon="['fab', 'twitter']" class="icon" />
+                <a class="share-twitter" :href="'https://twitter.com/share?text=' + result.title + '&hashtags=Corona, Infographics, BreakTheChain' + '&url=https://coronasafe.in' + $route.fullPath" target="_blank">
+                  <font-awesome-icon :icon="['fab', 'twitter']" class="icon" />
+                </a>
               </v-btn>
               <v-btn icon>
-                <font-awesome-icon :icon="['fab', 'whatsapp']" class="icon" />
+                <a :href="'whatsapp://send?text='+result.Description+'For more details : https://coronasafe.in'+$route.fullPath" data-action="share/whatsapp/share">
+                  <font-awesome-icon :icon="['fab', 'whatsapp']" class="icon" />
+                </a>
               </v-btn>
               </div>
             
@@ -97,7 +104,7 @@
 export default {
   data() {
     return {
-      result: []
+      result: [],
     };
   },
   methods: {
