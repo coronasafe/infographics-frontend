@@ -9,7 +9,9 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
@@ -18,7 +20,8 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "@nuxtjs/axios": "^5.9.5",
     "nuxt": "^2.0.0",
-    "nuxt-fontawesome": "^0.4.0"
+    "nuxt-fontawesome": "^0.4.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.0",
@@ -26,5 +29,6 @@
     "babel-jest": "^24.1.0",
     "jest": "^24.1.0",
     "vue-jest": "^4.0.0-0"
-  }
+  },
+  "snyk": true
 }
